@@ -23,3 +23,4 @@ const del=async ()=>{
     }
 }
 module.exports=del;
+dta()
