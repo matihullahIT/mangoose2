@@ -1,0 +1,112 @@
+.button {
+  padding: 2%;
+  text-align: center;
+  transition: all 0.25s ease-in-out;
+}
+
+.button:hover {
+  color: rgb(255, 255, 255);
+  background: rgb(3, 0, 179);
+  padding: 2.5%;
+}
+
+.contaner {
+  text-align: center;
+}
+
+.con {
+  width: 100px;
+  text-align: center;
+}
+
+.dot {
+  padding: 30px;
+  margin: 0;
+  margin-left: 300px;
+  background-color: rgb(0, 179, 179);
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  bottom: 20px;
+}
+
+/*form page css
+*/
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  background: rgba(106, 26, 106, 0.992);
+  padding: 1%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.element a {
+  transition-delay: 1ms;
+  transition: all 1s ease-in-out;
+  padding: 2%;
+}
+
+.element a:hover {
+  color: white;
+  background: purple 59%;
+}
+
+.button {
+  background: rgba(106, 26, 106, 0.992);
+  transition-delay: 111ms;
+  transition: all 1s ease-in-out;
+  padding: 2%;
+  margin: 1.5%;
+}
+
+.button:hover {
+  color: white;
+  background: rgb(37, 1, 37);
+}
+
+#login {
+  text-align: right;
+  color: white;
+}
+
+.body {
+  padding: 10%;
+  background: rgba(0, 0, 0, 0.688);
+  box-shadow: 0px 4px 20px 4px inset;
+  margin: 1%;
+}
+
+form {
+  padding: 3%;
+  text-align: center;
+  background-color: rgb(183, 183, 183);
+}
+
+input {
+  padding: 0.5%;
+  -webkit-text-decoration: dotted;
+          text-decoration: dotted;
+}
+
+.form {
+  padding: 1%;
+}
+
+.form label {
+  padding: 2%;
+  margin: 1%;
+}
+
+/* header a{
+    padding: 20px auto;
+    display: grid;
+    grid-column: auto auto auto auto ;
+} */
+.form {
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
