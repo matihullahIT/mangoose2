@@ -1,0 +1,49 @@
+const {adduser,
+finduser,
+deleteuser,
+update}=require('../Services/services')
+module.exports.add=async(req,resp)=>{
+try{
+adduser(req.body);
+resp.status(200).send(true);
+}
+catch(error){
+    resp.status(404).send(false)
+}
+}
+module.exports=find=async(req,resp)=>{
+    try{
+        const results= await finduser()
+    resp.send(results);
+    }
+    catch(error){
+        resp.status(404);
+        console.log(error)
+    }
+}
+module.exports=update=async(req,resp)=>{
+    try{
+        const results= await  update(req.body)
+        if(result.acknowledged){
+            resp.send(results);
+            console.log(results)
+        }
+    }
+    catch(error){
+        console.log(error)
+        resp.status(false);
+    }
+}
+module.exports=Delet=async(req,resp)=>{
+    try{
+        const results= await  deleteuser(req.body)
+        if(result.acknowledged){
+            resp.send(results);
+            console.log(results)
+        }
+    }
+    catch(error){
+        console.log(error)
+        resp.status(false);
+    }
+}

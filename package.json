@@ -1,8 +1,27 @@
 {
   "dependencies": {
     "express": "^4.18.2",
+    "init": "^0.1.2",
     "install": "^0.13.0",
-    "mongoose": "^6.7.0",
+    "mongoose": "^6.7.2",
     "nodemon": "^2.0.20"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "mangoose",
+  "version": "1.0.0",
+  "description": "a practice api for entering form ",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "mangoose "
+  },
+  "keywords": [
+    "api",
+    "API"
+  ],
+  "author": "Matih ur Rehman",
+  "license": "ISC"
 }

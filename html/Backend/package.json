@@ -1,0 +1,11 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "a sign up form for html file ",
+  "main": "\\",
+  "scripts": {
+    "test": "console.log(\"hello\")"
+  },
+  "author": "matih",
+  "license": "ISC"
+}

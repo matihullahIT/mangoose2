@@ -4,6 +4,10 @@ const userdata=mongoose.Schema({
         type :Number,
         require:true
     },
+    passward:{
+        type :Number,
+        require:true
+    },
     name:{
         type :String,
     },
