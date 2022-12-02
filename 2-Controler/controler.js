@@ -4,11 +4,10 @@ const {
     updatedta,
     deletedta
   } = require("../3-services/UserService");
-  
 module.exports.add=async(req,resp)=>{
     try{
         adddta(req.body);
-        resp.status(200).send(true)
+        resp.stnatus(200).send(true)
     }catch(error){
         console.log(error);
         resp.send(404).send(false)

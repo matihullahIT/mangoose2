@@ -1,5 +1,4 @@
 const user=require('../4-Modle/modle')
-const multer=require('multer')
 module.exports.adddta=async(body)=>{
     const{
         Employer_name,
