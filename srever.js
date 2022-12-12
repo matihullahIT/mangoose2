@@ -13,9 +13,9 @@ const dbconn=async()=>{
         console.log("db is connected")
     }catch(error){
         console.log(error+"there is some error in the code")
-    }
+    }   
 }
 app.listen(port,()=>{
-    console.log(`server is working on the porn number ${port}`)
+    console.log(`server is working on the port number ${port}`)
     dbconn();
 })
