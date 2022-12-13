@@ -14,11 +14,7 @@ type:String,
 },
 Details:{
     type:String,
-},
-// file:{
-//     data:Buffer,
-//     contentType:String,}},
-
+}
 },{timestamps:true})
     const userdta=mongoose.model('signupdta',udta) 
     module.exports=userdta; 
