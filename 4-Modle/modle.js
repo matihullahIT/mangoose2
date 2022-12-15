@@ -3,6 +3,7 @@ const dta=mongoose.Schema
 const udta=new dta({
     Emplpoyer_name:{
         type:String,
+        unique:true,
         require:true
 },
 Emplpoyer_Email:{
