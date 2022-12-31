@@ -15,7 +15,7 @@ module.exports.adddta=async(body)=>{
      file:file
     })
     user.Emplpoyer_name=user.Emplpoyer_name
-    const signupdta=await user.save() 
+    const signupdta=await User.save() 
 }
 module.exports.finddta= async(body)=>{
 const {

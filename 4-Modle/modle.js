@@ -10,10 +10,18 @@ Emplpoyer_Email:{
     type:String,
     require:true    
 },
+Passward:{
+    type:String,
+    unique:true,
+    require:true    
+},
 Project:{
 type:String,
 },
 Details:{
+    type:String,
+},
+filename:{
     type:String,
 }
 },{timestamps:true})

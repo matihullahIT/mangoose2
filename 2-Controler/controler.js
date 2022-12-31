@@ -12,9 +12,8 @@ const {
 //   const unlinkAsync=promisify(fs.unlink);
 module.exports.add=async(upload,req,resp)=>{
     try{
-
         adddta(req.body);
-        resp.stnatus(200).send(true)
+        resp.status(200).send(true)
     }catch(error){
         console.log(error);
         resp.send(404).send(false)

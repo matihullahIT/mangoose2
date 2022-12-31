@@ -1,0 +1,86 @@
+// const multer= require('multer')
+// const express= require('express')
+// const app= express();
+// const port =4000;
+// const conn=require('../backend/5-Config/config')
+// const data =require('../backend/4-Modle/modle')
+// const fs =require('fs')
+// const bodyparser=require("body-parser")
+// const path= require('path')
+// const filepath=path.join(__dirname,'../front end/html')
+// const { promisify } = require('util')
+//   const unlinkAsync=promisify(fs.unlink);
+//   // app.use(express.json())
+//   app.use(bodyparser.json())
+//   app.use(bodyparser.urlencoded({ extended: true }));
+// // const upload =multer({
+// //                         storage:multer.diskStorage({
+// //               destination:function(req,file,cb){
+// //                         cb(null,'uploads')
+// // app.use(express.json())
+// //               },
+// //               filename:function(req,file,cb) {
+// //                         cb(null,file.fieldname+"-"+Date.now()+".jpeg")
+// //               }
+// //             })
+// // }).single("signup_file")
+// let i=10
+// var storage = multer.diskStorage({
+//                         destination: function (req, file, cb) {
+//                           cb(null,'uploads')
+//                         },
+//                         filename: function (req, file, cb) {
+//                           cb(null,file.originalname+"_"+Date.now({ month: 'short', day: 'numeric', year: 'numeric' })+'.pdf')
+//                         }
+//                       });
+//                       var upload = multer({ storage: storage }).single('signup');
+//                       module.exports=upload
+// // const deltefile=await unlinkAsync(req.file.path)
+// // module.exports=deltefile;
+// app.get('/',(_,resp)=>{
+//     resp.sendFile(`${filepath}/index.html`)
+// })
+// app.get('*',(_,resp)=>{
+//     resp.send(`<h1>Error404</h1>
+//     <script>
+//     alert(page is not available)</script>`)
+// })
+// app.post("/d",async(req,resp)=>{
+//   await unlinkAsync(req.file.path)
+// })
+// app.post("/post",upload,async(req,resp)=>{
+//   resp.end(`the file has been submitted`)
+// })
+// app.post("/add", upload, async (req, resp) => {
+//   const udata = new data({
+//     Emplpoyer_name: req.body.Emplpoyer_name,
+//     Emplpoyer_Email: req.body.Emplpoyer_Email,
+//     Passward: req.body.Passward,
+//     Project: req.body.Project,
+//     Details: req.body.Details,
+//     filename: req.file.fieldname,
+//   });
+//   udata.save()
+//     .then((data) => resp.send("this data has been saved \t" + udata))
+//     .catch((err) => resp.send(err));
+// });
+
+// app.post("/findbyid",upload,async(req,resp)=>{
+//   data.find({Emplpoyer_name:req.body.Emplpoyer_name})
+//   .then(data=>resp.send(data))
+//   .catch(err=>resp.send(err));
+// })
+// app.post("/find",upload,async(req,resp)=>{
+//   data.find()
+//   .then(data=>resp.send(data))
+//   .catch(err=>resp.send(err));
+// })
+// app.delete("/",upload,async(req,resp)=>{
+//   data.deleteOne({Emplpoyer_Email:req.body.Emplpoyer_Email})
+//   .then(data=>resp.send(data))
+//   .catch(err=>resp.send(err));
+// })
+// app.listen(port,()=>{
+//   console.log("server is working on port number "+port)
+//   conn;
+// })

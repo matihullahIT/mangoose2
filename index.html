@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                        <meta charset="UTF-8">
+                        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                        <meta name="viewport" content="width=<!DOCTYPE html>
+<head>
+  <title>Signup Form</title>
+</head>
+<body>
+  <form action="/add" method="post" enctype="multipart/form-data">
+    <input type="text" name="Emplpoyer_name" placeholder="Emplpoyer_name" required>
+    <input type="email" name="Emplpoyer_Email" placeholder="Emplpoyer_Email" required>
+    <input type="password" name="Passward" placeholder="Passward" required>
+    <input type="text" name="Project" placeholder="Project" required>
+    <input type="text" name="Details" placeholder="Details" required>
+    <input type="file" name="signup" required>
+    <button type="submit">Signup</button>
+  </form>
+  <script>
+                        const form = document.getElementById("form");
+                        form.addEventListener("submit", (event) => {
+                          event.preventDefault(); // Prevent the form from reloading the page
+                          const formData = new FormData(form); // Create a FormData object from the form
+                          fetch("/submit", {
+                            method: "POST",
+                            body: formData,
+                          })
+                            .then((response) => response.json())
+                            .then((data) => {
+                              console.log(data.message); // Log the response message to the console
+                            });
+                        });
+                        
+                        </script>             
+</body>
+</html>
