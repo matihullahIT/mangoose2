@@ -1,7 +1,6 @@
 <!-- //how to make a responsive navigation in html? -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>Test</title>
   <meta charset="utf-8">
@@ -10,12 +9,38 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .container{
+      position: relative;
+      text-align: center;
+      border: 1px solid;
+      background-image: linear-gradient(to left,rgb(255, 0, 43),blue);
+    }
+    @keyframes move{
+      from{
+        top:-100%;
+        left:-100%;
+        box-shadow: 0 0 0 0 ;
+      }
+      to{
+        top:100%;
+        left:100%;
+        box-shadow: 10px 10px 10px 10px grey ;
+      }
+      0%{
+        transform: translateX(0);
+      }
+      100%{
+        transform: translateX(100px);
+      }
+    }
+  </style>
 </head>
 
 <body>
 
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-    <a class="navbar-brand" href="#">My WebsiteName</a>
+    <a class="navbar-brand" href="../html/index.html">My WebsiteName</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -36,7 +61,7 @@
   <br>
 
   <div class="container">
-    <h3>Hello World</h3>
+    <h3>Error 404</h3>
   </div>
 
 </body>

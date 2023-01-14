@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+                        <meta charset="UTF-8">
+                        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>index page </title>
+  <style>
+  </style>
+</head>
+
+<body>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" href="../boot strap/index.html">Active</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Blog Page</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../boot strap/signup.html">Sign Up /Log in </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+  <div class="form-group">
+    <form action="/add" method="post" enctype="multipart/form-data">
+      Employer name : <input type="text" name="Emplpoyer_name" placeholder="Emplpoyer_name" required><br>
+      Employer Email:<input type="email" name="Emplpoyer_Email" placeholder="Emplpoyer_Email" required><br>
+    Passward:<input type="password" name="Passward" placeholder="Passward" required><br>
+    Project:<input type="text" name="Project" placeholder="Project" required><br>
+    Details:<input type="text" name="Details" placeholder="Details" required><br>
+   File: <input type="file" name="signup" required=".pdf"><br>
+   <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+  <label class="form-check-label" for="defaultCheck2">
+    Disabled checkbox
+  </label>
+  <br>  
+    <button type="submit">Signup</button>
+  </form>
+</div>
+  <script>
+                        const form = document.getElementById("form");
+                        form.addEventListener("submit", (event) => {
+                          event.preventDefault(); // Prevent the form from reloading the page
+                          const formData = new FormData(form); // Create a FormData object from the form
+                          fetch("/submit", {
+                            method: "POST",
+                            body: formData,
+                          })
+                            .then((response) => response.json())
+                            .then((data) => {
+                              console.log(data.message); // Log the response message to the console
+                            });
+                        });
+                        
+                        </script>             
+</body>
+</html>

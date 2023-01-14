@@ -6,7 +6,7 @@ module.exports.adddta=async(body)=>{
         Project,
         Details,
         file,
-    }=body;
+    }=body; 
     const User=new user({
      Emplyer_name:Employer_name,
      Emplpoyer_Email:Emplpoyer_Email,
